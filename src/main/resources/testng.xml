@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Array testing">
+    <test name="Services">
+        <classes>
+            <class name="test.com.ltp.shapes.service.impl.TypeCheckServiceImplTest"/>
+            <class name="test.com.ltp.shapes.service.impl.CalculateServiceImplTest"/>
+        </classes>
+    </test>
+</suite>
