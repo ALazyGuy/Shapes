@@ -15,6 +15,12 @@
         </classes>
     </test>
 
+    <test name="Parser">
+        <classes>
+            <class name="test.com.ltp.shapes.parser.ParserTest"/>
+        </classes>
+    </test>
+
     <test name="Validator">
         <classes>
             <class name="test.com.ltp.shapes.validator.ShapeValidatorTest"/>
