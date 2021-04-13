@@ -4,6 +4,8 @@ import com.ltp.shapes.model.entity.Triangle;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -23,6 +25,10 @@ public class ShapeValidator {
     public static boolean validateLine(String line){
         boolean isValid = Pattern.matches(VALID_EXP, line);
         return isValid;
+    }
+
+    public static boolean validateFile(String filename){
+        return (filename != null) && (Files.exists(Paths.get(filename)));
     }
 
 }
