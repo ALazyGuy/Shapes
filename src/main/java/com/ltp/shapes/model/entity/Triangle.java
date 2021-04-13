@@ -1,13 +1,16 @@
 package com.ltp.shapes.model.entity;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Setter;
 
 @Data
 @AllArgsConstructor
 public class Triangle {
 
     private Point p1, p2, p3;
+    @Setter(AccessLevel.NONE)
     private int id;
 
     @Override
