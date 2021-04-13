@@ -67,4 +67,9 @@ public class TriangleRepositoryImpl implements TriangleRepository {
 
         return (counter == objects.size() ? -1 : counter);
     }
+
+    @Override
+    public void removeAll() {
+        objects.clear();
+    }
 }

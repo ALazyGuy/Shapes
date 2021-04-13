@@ -10,4 +10,5 @@ public interface TriangleRepository {
     void remove(Triangle triangle);
     List<Triangle> query(Specification specification);
     List<Triangle> getAll();
+    void removeAll();
 }
