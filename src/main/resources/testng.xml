@@ -6,6 +6,7 @@
             <class name="test.com.ltp.shapes.service.impl.TypeCheckServiceImplTest"/>
             <class name="test.com.ltp.shapes.service.impl.CalculateServiceImplTest"/>
             <class name="test.com.ltp.shapes.service.impl.ReadingServiceImplTest"/>
+            <class name="test.com.ltp.shapes.service.impl.SortingServiceImplTest"/>
         </classes>
     </test>
 
