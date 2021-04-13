@@ -5,6 +5,13 @@
         <classes>
             <class name="test.com.ltp.shapes.service.impl.TypeCheckServiceImplTest"/>
             <class name="test.com.ltp.shapes.service.impl.CalculateServiceImplTest"/>
+            <class name="test.com.ltp.shapes.service.impl.ReadingServiceImplTest"/>
+        </classes>
+    </test>
+
+    <test name="Validator">
+        <classes>
+            <class name="test.com.ltp.shapes.validator.ShapeValidatorTest"/>
         </classes>
     </test>
 </suite>

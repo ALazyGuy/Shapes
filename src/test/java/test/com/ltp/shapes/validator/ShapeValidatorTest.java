@@ -24,4 +24,29 @@ public class ShapeValidatorTest {
         AssertJUnit.assertEquals(expected, actual);
     }
 
+    @Test
+    public void validateLineFalseTest(){
+        boolean result = ShapeValidator.validateLine("1, 3");
+        AssertJUnit.assertFalse(result);
+    }
+
+    @Test
+    public void validateLineTrueTest(){
+        boolean result = ShapeValidator.validateLine("1 1,2 2,3 3");
+        AssertJUnit.assertTrue(result);
+    }
+    @Test
+    public void validateFileFalseTest(){
+        boolean result = ShapeValidator.validateFile("ERROR HERE");
+        AssertJUnit.assertFalse(result);
+    }
+
+    @Test
+    public void validateFileTrueTest(){
+        boolean result = ShapeValidator.validateFile("src/main/resources/data/input.txt");
+        AssertJUnit.assertTrue(result);
+    }
+
+
+
 }
