@@ -34,14 +34,13 @@ public class TriangleRepositoryTest {
         triangleRepository.save(new Triangle(new Point(2, 2), new Point(1, 3), new Point(1, 1), 3));
     }
 
-    @Test
     public void queryByIdTest(){
         int expected = 1;
         List<Triangle> actual = triangleRepository.query(idSpecification);
         AssertJUnit.assertEquals(expected, actual.get(0).getId());
     }
 
-    @Test
+    @Test(description = "Test if returned only one element")
     public void queryByIdSizeTest(){
         int expected = 1;
         List<Triangle> actual = triangleRepository.query(idSpecification);
