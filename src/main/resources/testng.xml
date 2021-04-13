@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Array testing">
+<suite name="Shape testing">
     <test name="Services">
         <classes>
             <class name="test.com.ltp.shapes.service.impl.TypeCheckServiceImplTest"/>
@@ -24,6 +24,12 @@
     <test name="Validator">
         <classes>
             <class name="test.com.ltp.shapes.validator.ShapeValidatorTest"/>
+        </classes>
+    </test>
+
+    <test name="Observers">
+        <classes>
+            <class name="test.com.ltp.shapes.observer.impl.CoordinatesChangeObserverTest"/>
         </classes>
     </test>
 </suite>
