@@ -30,7 +30,12 @@ public class TriangleRepositoryImpl implements TriangleRepository {
 
     @Override
     public void save(Triangle triangle) {
-        objects.add(triangle);
+        int index = objectIndexById(triangle.getId());
+        if(index == -1){
+            objects.add(triangle);
+        }else{
+            objects.set(index, triangle);
+        }
         LOGGER.log(Level.INFO, String.format("%s saved to repository", triangle.toString()));
     }
 
@@ -49,5 +54,17 @@ public class TriangleRepositoryImpl implements TriangleRepository {
     @Override
     public List<Triangle> getAll() {
         return new ArrayList(objects);
+    }
+
+    private int objectIndexById(int id){
+        int counter = 0;
+        while(counter < objects.size()){
+            if(objects.get(counter).getId() == id){
+                break;
+            }
+            counter++;
+        }
+
+        return (counter == objects.size() ? -1 : counter);
     }
 }
