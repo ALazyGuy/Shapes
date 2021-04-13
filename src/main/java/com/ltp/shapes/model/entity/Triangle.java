@@ -1,17 +1,29 @@
 package com.ltp.shapes.model.entity;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Setter;
+import com.ltp.shapes.observer.Observable;
+import com.ltp.shapes.observer.Observer;
+import lombok.*;
 
-@Data
-@AllArgsConstructor
-public class Triangle {
+import java.util.ArrayList;
+import java.util.EventObject;
+import java.util.List;
+
+@Getter
+public class Triangle implements Observable {
 
     private Point p1, p2, p3;
-    @Setter(AccessLevel.NONE)
     private int id;
+    @Getter(AccessLevel.NONE)
+    private List<Observer> observers;
+
+    Triangle(Point p1, Point p2, Point p3, int id){
+        this.p1 = p1;
+        this.p2 = p2;
+        this.p3 = p3;
+        this.id = id;
+        observers = new ArrayList<>();
+        notifyObservers();
+    }
 
     @Override
     public String toString(){
@@ -30,6 +42,36 @@ public class Triangle {
     public int hashCode(){
         int result = 19 * p1.hashCode() + 13 * p2.hashCode() + 31 * p3.hashCode() - id;
         return result;
+    }
+
+    @Override
+    public void notifyObservers() {
+        for(Observer observer : observers){
+            observer.update(new EventObject(this));
+        }
+    }
+
+    public void addObserver(Observer observer){
+        observers.add(observer);
+    }
+
+    public void removeObserver(Observer observer){
+        observers.remove(observer);
+    }
+
+    public void setP1(Point p1){
+        this.p1 = p1;
+        notifyObservers();
+    }
+
+    public void setP2(Point p2){
+        this.p2 = p2;
+        notifyObservers();
+    }
+
+    public void setP3(Point p3){
+        this.p3 = p3;
+        notifyObservers();
     }
 
 }
