@@ -8,6 +8,6 @@ public class CoordinatesChangeObserver implements Observer {
 
     @Override
     public void update(EventObject object) {
-        
+
     }
 }

@@ -16,7 +16,7 @@ public class Triangle implements Observable {
     @Getter(AccessLevel.NONE)
     private List<Observer> observers;
 
-    Triangle(Point p1, Point p2, Point p3, int id){
+    public Triangle(Point p1, Point p2, Point p3, int id){
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;

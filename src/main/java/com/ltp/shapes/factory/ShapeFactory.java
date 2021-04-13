@@ -3,6 +3,7 @@ package com.ltp.shapes.factory;
 import com.ltp.shapes.exception.ShapeException;
 import com.ltp.shapes.model.entity.Point;
 import com.ltp.shapes.model.entity.Triangle;
+import com.ltp.shapes.observer.impl.CoordinatesChangeObserver;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -30,6 +31,7 @@ public class ShapeFactory {
     private Triangle createTriangle(int x1, int y1, int x2, int y2, int x3, int y3){
         Point p1 = new Point(x1, y1), p2 = new Point(x2, y2), p3 = new Point(x3, y3);
         Triangle result = new Triangle(p1, p2, p3, idCounter++);
+        result.addObserver(new CoordinatesChangeObserver());
         return result;
     }
 
