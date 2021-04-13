@@ -9,6 +9,12 @@
         </classes>
     </test>
 
+    <test name="Repositories">
+        <classes>
+            <class name="test.com.ltp.shapes.repository.TriangleRepositoryTest"/>
+        </classes>
+    </test>
+
     <test name="Validator">
         <classes>
             <class name="test.com.ltp.shapes.validator.ShapeValidatorTest"/>
