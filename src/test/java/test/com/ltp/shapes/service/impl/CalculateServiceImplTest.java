@@ -17,7 +17,7 @@ public class CalculateServiceImplTest {
     @BeforeClass
     public void init(){
         calculateService = CalculateServiceImpl.getInstance();
-        triangle = new Triangle(new Point(0, 0), new Point(1, 1), new Point(1, 0));
+        triangle = new Triangle(new Point(0, 0), new Point(1, 1), new Point(1, 0), -1);
     }
 
     @Test(description = "Calculating perimeter here")

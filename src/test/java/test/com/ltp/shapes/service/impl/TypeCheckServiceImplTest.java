@@ -18,10 +18,10 @@ public class TypeCheckServiceImplTest {
     @BeforeClass
     public void init(){
         typeCheckService = TypeCheckServiceImpl.getInstance();
-        triangleRight = new Triangle(new Point(0, 0), new Point(1, 1), new Point(1, 0));
-        isoscelesTriangle = new Triangle(new Point(0, 0), new Point(1, 2), new Point(2, 0));
-        acuteAngledTriangle = new Triangle(new Point(0, 0), new Point(1, 0), new Point(2, 1));
-        obtuseTriangle = new Triangle(new Point(0, 0), new Point(2, 0), new Point(1, 1));
+        triangleRight = new Triangle(new Point(0, 0), new Point(1, 1), new Point(1, 0), -1);
+        isoscelesTriangle = new Triangle(new Point(0, 0), new Point(1, 2), new Point(2, 0), -1);
+        acuteAngledTriangle = new Triangle(new Point(0, 0), new Point(1, 0), new Point(2, 1), -1);
+        obtuseTriangle = new Triangle(new Point(0, 0), new Point(2, 0), new Point(1, 1), -1);
     }
 
     @Test
